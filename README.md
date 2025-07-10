@@ -70,14 +70,17 @@ Due to high computational load (2000+ epochs), WGAN outputs were pre-generated a
 ```bash
 pip install -r requirements.txt
 
-## Author
-Meet Patel
+---
 
-## References
-TensorFlow CVAE Tutorial
+## 💻 Author
 
-Kingma, D. P., & Welling, M. (2014). Auto-Encoding Variational Bayes
+- Meet Patel
 
-Arjovsky, M., Chintala, S., & Bottou, L. (2017). Wasserstein GAN
+---
 
-Oleh Onyshchak's Apple Stock Dataset on Kaggle
+## 📚 References
+
+- [TensorFlow CVAE Tutorial](https://www.tensorflow.org/tutorials/generative/cvae)
+- Kingma, D. P., & Welling, M. (2014). *Auto-Encoding Variational Bayes*
+- Arjovsky, M., Chintala, S., & Bottou, L. (2017). *Wasserstein GAN*
+- Oleh Onyshchak's [Apple Stock Dataset on Kaggle](https://www.kaggle.com/datasets/olegon/usa-stocks-daily)
