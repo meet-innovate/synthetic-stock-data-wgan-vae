@@ -63,16 +63,7 @@ Due to high computational load (2000+ epochs), WGAN outputs were pre-generated a
 
 ---
 
-## 🛠 How to Run
-
-### 1. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-
----
-
-## 💻 Author
+## 👨‍💻 Author
 
 - Meet Patel
 
