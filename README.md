@@ -1,41 +1,83 @@
-# 📊 Synthetic Stock Data Generator using Variational Autoencoder (VAE)
+# 📊 Synthetic Stock Data Generator using VAE and WGAN
 
-This project uses a **Variational Autoencoder (VAE)** to generate synthetic Apple stock data (1980–2020). It helps simulate realistic financial data when original datasets are limited or sensitive.
+This project demonstrates the generation of **synthetic Apple stock price data** using two deep generative models:
+
+- **Variational Autoencoder (VAE)**
+- **Wasserstein GAN (WGAN)**
+
+These models simulate realistic financial time-series data where real datasets may be limited, private, or expensive to obtain.
+
+---
 
 ## 🧠 Project Summary
 
-- **Model Used**: VAE with TensorFlow
-- **Data**: AAPL stock (Open, High, Low, Close, Volume)
+- **Models Used**: VAE (TensorFlow) and WGAN (Keras)
+- **Dataset**: Apple Inc. stock data from 1980–2020
+- **Features Used**: `Open`, `High`, `Low`, `Close`, `Volume`
 - **Techniques**:
-  - Normalization via `StandardScaler`
-  - Visual comparisons via PCA and t-SNE
-- **Output**: `synthetic_AAPL.csv`
+  - StandardScaler & MinMaxScaler
+  - Visual evaluation using PCA and t-SNE
+- **Outputs**:
+  - `synthetic_AAPL.csv` (from VAE)
+  - WGAN plots (saved as images)
+
+---
 
 ## 📂 Folder Structure
 
-| Folder/File        | Description                              |
-|--------------------|------------------------------------------|
-| `src/train_vae.py` | Main VAE training & generation script    |
-| `data/`            | Raw input stock data                     |
-| `visualizations/`  | PCA and t-SNE plots                      |
-| `models/`          | (Optional) Trained model weights         |
-| `README.md`        | Project summary and instructions         |
-| `requirements.txt` | Python packages needed                   |
+| Folder/File                     | Description                                      |
+|--------------------------------|--------------------------------------------------|
+| `src/train_vae.py`             | VAE model training and generation script         |
+| `src/train_wgan.py`            | WGAN training script (optional to run)           |
+| `data/raw/AAPL_stock.csv`      | Raw stock dataset                                |
+| `visualizations/`              | PCA and t-SNE plots for real vs synthetic data   |
+| `models/`                      | Trained model weights (if saved)                 |
+| `README.md`                    | Project documentation                            |
+| `requirements.txt`             | Python dependencies                              |
+
+---
 
 ## 📈 Visual Results
 
-Example of PCA & t-SNE plot output:
+### VAE: Real vs Synthetic
 
-![PCA](visualizations/pca_vs_synthetic.png)
-	
-![t-SNE](visualizations/tsne_vs_synthetic.png)
+![VAE PCA](visualizations/pca_vs_synthetic.png)
+
+![VAE t-SNE](visualizations/tsne_vs_synthetic.png)
+
+---
+
+## 🔄 WGAN: Alternative Generative Approach
+
+In addition to the VAE model, a **Wasserstein GAN (WGAN)** was implemented for comparison.
+
+Due to high computational load (2000+ epochs), WGAN outputs were pre-generated and added to this repository as static visualizations.
+
+### WGAN Visual Outputs
+
+#### PCA: Real vs Synthetic
+![WGAN PCA](visualizations/pca_real_vs_synthetic.png)
+
+#### t-SNE: Real vs Synthetic
+![WGAN t-SNE](visualizations/tsne_real_vs_synthetic.png)
+
+---
 
 ## 🛠 How to Run
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+### 1. Install Dependencies
 
-##  Author
+```bash
+pip install -r requirements.txt
 
-- Meet Patel
+## Author
+Meet Patel
+
+## References
+TensorFlow CVAE Tutorial
+
+Kingma, D. P., & Welling, M. (2014). Auto-Encoding Variational Bayes
+
+Arjovsky, M., Chintala, S., & Bottou, L. (2017). Wasserstein GAN
+
+Oleh Onyshchak's Apple Stock Dataset on Kaggle
