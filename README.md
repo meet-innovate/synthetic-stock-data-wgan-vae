@@ -27,6 +27,8 @@ This project uses a **Variational Autoencoder (VAE)** to generate synthetic Appl
 Example of PCA & t-SNE plot output:
 
 ![PCA](visualizations/pca_vs_synthetic.png)
+	
+![t-SNE](visualizations/tsne_vs_synthetic.png)
 
 ## 🛠 How to Run
 
